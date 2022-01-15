@@ -1,3 +1,4 @@
+/* Import Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
@@ -6,6 +7,7 @@ body{
     color: #3A3A3A;
     margin: 0;
 }
+/* Margin for whole page */
 .margin{
     margin-left: 100px;
     margin-right: 100px;
@@ -20,7 +22,7 @@ body{
 }
 #dif-font{
     font-family: 'Anton', sans-serif;
-    font-size: 60px;
+    font-size: 4em;
 }
 .half-section{
     width: 50%;
@@ -44,8 +46,8 @@ body{
     margin-top: 80px;
     border: 1px solid #3A3A3A;
 }
-hr-2{
-    margin-bottom: 150px;
+.hr-2{
+    margin-bottom: 80px;
     border: 1px solid #3A3A3A;
 }
 .logos{
@@ -102,7 +104,7 @@ hr-2{
     height: 350px;
     padding: 10px;
     background-color: whitesmoke;
-    margin: 10px;
+    margin: 13px;
     border-radius: 10px;
     box-shadow: 1px 1px 90px gray;
 }
@@ -113,7 +115,7 @@ hr-2{
     color: white;
     text-decoration: none;
     font-weight: 700;
-    margin-left: 27%;
+    margin-left: 25%;
 }
 .profile img{
     width: 50%;
@@ -123,12 +125,73 @@ hr-2{
     text-align: center;
 }
 .gamer{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
+
+/* Style Footer Seciton */
 footer{
     background-color: rgb(16, 16, 58);
     color: white;
     height: 200px;
     text-align: center;
     padding: 30px;
+}
+
+
+/* ------------------------------
+            Media Queries
+---------------------------------*/
+
+/* Mobile Devices */
+@media only screen and (max-width:767px){
+    .first-part{
+        
+        margin-top: 80px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .half-section{
+        width: 80%;
+    }
+    .header-section{
+        display: inline-block;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+    .popular-collection{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gamer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .first-part{  
+        margin-top: 80px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .half-section{
+        width: 80%;
+    }
+    .header-section{
+        display: inline-block;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+    .popular-collection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gamer{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
